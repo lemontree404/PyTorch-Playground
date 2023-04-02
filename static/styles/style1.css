@@ -1,0 +1,130 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+font-size: 16px;
+}
+
+.title-bar {
+background-color: #009688;
+color: white;
+padding: 16px;
+text-align: center;
+}
+
+.title-bar h1 {
+margin: 0;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+
+.controls {
+width: 80%;
+max-width: 600px;
+margin-bottom: 32px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 16px;
+}
+
+.form-group label {
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+.layer {
+display: flex;
+flex-direction: column;
+margin-bottom: 8px;
+}
+
+.layer label {
+font-weight: bold;
+margin-bottom: 4px;
+}
+
+.layer div {
+display: flex;
+align-items: center;
+}
+
+.layer input {
+width: 50px;
+margin-right: 8px;
+}
+
+.layer-activation {
+margin-left: 8px;
+}
+
+button {
+background-color: #009688;
+color: white;
+border: none;
+padding: 8px 16px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease-in-out;
+/* margin-left: 16px; */
+margin-bottom: 16px;
+}
+
+button:hover {
+background-color: #00796b;
+}
+
+button:active {
+background-color: #00695c;
+}
+
+#chart {
+width: 80%;
+max-width: 600px;
+height: 400px;
+}
+
+input[type="submit"] {
+    margin-top: 16px;
+    /* margin-left: 16px; */
+    margin-bottom: 16px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #00796b;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:active {
+    background-color: #00695c;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  form{
+    margin-left: 15px;
+    margin-top: 15px;
+  }

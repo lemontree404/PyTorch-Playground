@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PyTorch Playground</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style1.css') }}">
+</head>
+<body>
+    <div class="title-bar" style="display:flex; justify-content:start; margin:0 0 10px 0">
+        <h1>PyTorch Playground</h1>
+    </div>
+  <form action="/train" method="post">
+    <label for="problem">Select a problem statement:</label>
+    <select name="problem" id="problem">
+      <option value="sin_cos">y = sin(2x) + cos(x)</option>
+      <option value="sin_squared">y = x * sin2(x)/2</option>
+      <option value="signal">Signal</option>
+    </select>
+    <br><br>
+    Epochs: <input type="number" name="epochs" min="1000" max="10000" step="5">
+    <br>
+    <div id="layers">
+      <h3>Layers</h3>
+      <button type="button" onclick="add_layer()">Add Layer</button>
+      <br>
+    </div>
+    <input type="submit" value="Train Model">
+  </form>
+  <h1>Output:</h1>
+  {{ graph_html|safe }}
+  <script>
+    function add_layer() {
+      var div = document.createElement('div');
+      div.innerHTML = `
+        <label for="layer${layer_count}">Layer ${layer_count+1}:</label>
+        <select name="activation${layer_count}" id="activation${layer_count}">
+          <option value="relu">ReLU</option>
+          <option value="sigmoid">Sigmoid</option>
+          <option value="tanh">Tanh</option>
+        </select>
+        <input type="number" name="neurons${layer_count}" id="neurons${layer_count}" min="1" max="1000" step="1" value="1">
+        <br>
+      `;
+      document.getElementById('layers').appendChild(div);
+      layer_count++;
+    }
+
+    var layer_count = 0;
+  </script>
+</body>
+</html>
+</body>
+</html>

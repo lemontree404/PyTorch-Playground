@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="dabba">
+        <form action="/login" class="login" method="post">
+            <h4>{{msg}}</h4>
+            <div>Username:<br><input type="text" name="username" placeholder="Username"></div>
+            <div>Password:<br><input type="password" name="password" placeholder="Password"></div>
+            <input type="submit">
+            <button><a href="/signup" id="sup">Sign Up</button></button>
+        </form>
+    </div>
+</body>
+</html>
